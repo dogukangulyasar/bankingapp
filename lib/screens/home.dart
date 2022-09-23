@@ -76,7 +76,43 @@ class Home extends StatelessWidget {
                     ),
                   ],
                 ),
-                const BankCard()
+                // Card with blue circle
+                Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 70),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Container(
+                          width: 100,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(100),
+                                bottomRight: Radius.circular(100)),
+                            color: HexColor(circleLightBlue).withOpacity(.5),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      child: const BankCard(),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 24),
+                  child: Row(
+                    children: const [
+                      Text(
+                        "LAST TRANSACTIONS",
+                        style: TextStyle(
+                            color: Colors.grey, fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),
