@@ -1,5 +1,6 @@
 import 'package:bankingapp/constants/colors.dart';
 import 'package:bankingapp/widgets/avatar.dart';
+import 'package:bankingapp/widgets/bankcard.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -60,19 +61,22 @@ class Home extends StatelessWidget {
                             ],
                           ),
                         ),
+                        // Top Yello Circle
                         Container(
                           height: 150,
                           width: 150,
                           decoration: BoxDecoration(
-                              color: HexColor(yellow),
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(300),
-                              )),
+                            color: HexColor(yellow),
+                            borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(300),
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ],
                 ),
+                const BankCard()
               ],
             ),
           ),
